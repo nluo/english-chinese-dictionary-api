@@ -1,9 +1,9 @@
 {
   "name": "word-list-api",
   "main": "server.js",
-  "dependencies": {
-    "express": "4.x.x",
-    "morgan": "~1.x.x",
+  "dependencies": { 
+    "bcrypt": "^0.7.8",
+    "beeline": "^0.2.2",
     "body-parser": "~1.x.x",
     "method-override": "~1.x.x"
   }
