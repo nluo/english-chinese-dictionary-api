@@ -5,4 +5,6 @@ var routes = {
     }
 };
 
+require('./wordRoutes')(routes);
+
 module.exports = beeline.route(routes);
