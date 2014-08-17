@@ -5,6 +5,7 @@
     "bcrypt": "^0.7.8",
     "beeline": "^0.2.2",
     "body-parser": "~1.x.x",
-    "method-override": "~1.x.x"
+    "method-override": "~1.x.x",
+    "retort": "~1.0.1"
   }
 }
