@@ -4,11 +4,25 @@ var http = require('http'),
 	port = 8080;
 
 
-server.on('request', function(request, response){
-	router(request, response);
+var beeline = require('beeline');
+var connect = require('connect');
+
+var app = connect();
+
+
+// parse urlencoded request bodies into req.body
+var bodyParser = require('body-parser')
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(bodyParser.json());
+
+
+app.use(function(req, res){
+    router(req, res);
 });
 
 
-server.listen(port, function(error){
-	console.log('Listening on port: ', port);
-});
+//create node.js http server and listen on port
+http.createServer(app).listen(8080)
